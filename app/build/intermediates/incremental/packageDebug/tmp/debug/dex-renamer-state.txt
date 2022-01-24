@@ -1,0 +1,4 @@
+#Mon Jan 24 19:20:57 IST 2022
+base.0=/Users/test/Desktop/Drink-it_Materials/final/app/build/intermediates/dex/debug/out/classes.dex
+path.0=classes.dex
+renamed.0=classes.dex
