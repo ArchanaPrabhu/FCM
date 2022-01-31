@@ -44,11 +44,11 @@ import com.google.firebase.messaging.FirebaseMessagingService
 import com.google.firebase.messaging.RemoteMessage
 
 class MyFirebaseMessagingService : FirebaseMessagingService() {
-  private var broadcaster: LocalBroadcastManager? = null
+//  private var broadcaster: LocalBroadcastManager? = null
   private val processLater = false
 
   override fun onCreate() {
-    broadcaster = LocalBroadcastManager.getInstance(this)
+//    broadcaster = LocalBroadcastManager.getInstance(this)
   }
 
   override fun onNewToken(token: String) {
@@ -59,12 +59,12 @@ class MyFirebaseMessagingService : FirebaseMessagingService() {
 
   override fun onMessageReceived(remoteMessage: RemoteMessage) {
     super.onMessageReceived(remoteMessage)
-
+    Log.d(TAG, "onMessageReceived : " + Thread.currentThread().name)
     Log.d(TAG, "From: ${remoteMessage.from}")
 
 
-    if (/* Check if data needs to be processed by long running job */ processLater) {
-      //scheduleJob()
+    if (/* Check if data needs to be processed by long running job */ true) {
+//      scheduleJob()
       Log.d(TAG, "executing schedule job")
     } else {
       // Handle message within 10 seconds
@@ -81,7 +81,7 @@ class MyFirebaseMessagingService : FirebaseMessagingService() {
       remoteMessage.notification?.let {
         val intent = Intent("MyData")
         intent.putExtra("message", remoteMessage.data["text"])
-        broadcaster?.sendBroadcast(intent)
+//        broadcaster?.sendBroadcast(intent)
       }
     }
   }

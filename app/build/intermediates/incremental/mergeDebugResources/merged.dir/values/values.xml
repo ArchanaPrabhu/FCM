@@ -581,16 +581,15 @@
     <string name="common_open_on_phone">Open on phone</string>
     <string name="common_signin_button_text">Sign in</string>
     <string name="common_signin_button_text_long">Sign in with Google</string>
-    <string name="default_web_client_id" translatable="false">289764866051-qu8qp5769r9d5627t0bvp3ur5ofuo9gc.apps.googleusercontent.com</string>
+    <string name="default_web_client_id" translatable="false">401478486020-72cv020o5u7ajsui8lr7abmubv4kp00c.apps.googleusercontent.com</string>
     <string name="fcm_fallback_notification_channel_label">Miscellaneous</string>
-    <string name="firebase_database_url" translatable="false">https://drink-it-49192.firebaseio.com</string>
-    <string name="gcm_defaultSenderId" translatable="false">289764866051</string>
-    <string name="google_api_key" translatable="false">AIzaSyAv-F-z8DWkbIFVKDro3he6JQQk1EpEnMk</string>
-    <string name="google_app_id" translatable="false">1:289764866051:android:9d32c8c4f7786a41777636</string>
-    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyAv-F-z8DWkbIFVKDro3he6JQQk1EpEnMk</string>
-    <string name="google_storage_bucket" translatable="false">drink-it-49192.appspot.com</string>
+    <string name="gcm_defaultSenderId" translatable="false">401478486020</string>
+    <string name="google_api_key" translatable="false">AIzaSyCeTRmAA0-yjaX1j06oXwLXr6CoL4-Rn3s</string>
+    <string name="google_app_id" translatable="false">1:401478486020:android:8733b87d0eb4755ed54d51</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyCeTRmAA0-yjaX1j06oXwLXr6CoL4-Rn3s</string>
+    <string name="google_storage_bucket" translatable="false">drink-it-da6b2.appspot.com</string>
     <string name="handle_notification_now">We are going to do something with our notification right now!</string>
-    <string name="project_id" translatable="false">drink-it-49192</string>
+    <string name="project_id" translatable="false">drink-it-da6b2</string>
     <string name="retrieve_token">Retrieve Token</string>
     <string name="search_menu_title">Search</string>
     <string name="status_bar_notification_info_overflow">999+</string>

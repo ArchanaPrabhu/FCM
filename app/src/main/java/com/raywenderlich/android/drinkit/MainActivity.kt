@@ -62,49 +62,49 @@ class MainActivity : AppCompatActivity() {
     setContentView(R.layout.activity_main)
 
       // Your code
-      button_retrieve_token.setOnClickListener {
-        // Get token
-        if ( checkGooglePlayServices() ) {
-          // [START retrieve_current_token]
-          FirebaseInstanceId.getInstance().instanceId
-              .addOnCompleteListener(OnCompleteListener { task ->
-                if (!task.isSuccessful) {
-                  Log.w(TAG, getString(R.string.token_error), task.exception)
-                  return@OnCompleteListener
-                }
+//      button_retrieve_token.setOnClickListener {
+//        // Get token
+//        if ( checkGooglePlayServices() ) {
+//          // [START retrieve_current_token]
+//          FirebaseInstanceId.getInstance().instanceId
+//              .addOnCompleteListener(OnCompleteListener { task ->
+//                if (!task.isSuccessful) {
+//                  Log.w(TAG, getString(R.string.token_error), task.exception)
+//                  return@OnCompleteListener
+//                }
+//
+//                // Get new Instance ID token
+//                val token = task.result?.token
+//
+//                // Log and toast
+//                val msg = getString(R.string.token_prefix, token)
+//                Log.d(TAG, msg)
+//                Toast.makeText(baseContext, msg, Toast.LENGTH_LONG).show()
+//              })
+//          // [END retrieve_current_token]
+//        } else {
+//          //You won't be able to send notifications to this device
+//          Log.w(TAG, "Device doesn't have google play services")
+//        }
+//      }
 
-                // Get new Instance ID token
-                val token = task.result?.token
-
-                // Log and toast
-                val msg = getString(R.string.token_prefix, token)
-                Log.d(TAG, msg)
-                Toast.makeText(baseContext, msg, Toast.LENGTH_LONG).show()
-              })
-          // [END retrieve_current_token]
-        } else {
-          //You won't be able to send notifications to this device
-          Log.w(TAG, "Device doesn't have google play services")
-        }
-      }
-
-    val bundle = intent.extras
-    if (bundle != null) { //bundle must contain all info sent in "data" field of the notification
-      text_view_notification.text = bundle.getString("text")
-    }
+//    val bundle = intent.extras
+//    if (bundle != null) { //bundle must contain all info sent in "data" field of the notification
+//      text_view_notification.text = bundle.getString("text")
+//    }
   }
 
 
   override fun onStart() {
     super.onStart()
-    LocalBroadcastManager.getInstance(this).registerReceiver(messageReceiver,
-        IntentFilter("MyData")
-    )
+//    LocalBroadcastManager.getInstance(this).registerReceiver(messageReceiver,
+//        IntentFilter("MyData")
+//    )
   }
 
   override fun onStop() {
     super.onStop()
-    LocalBroadcastManager.getInstance(this).unregisterReceiver(messageReceiver)
+//    LocalBroadcastManager.getInstance(this).unregisterReceiver(messageReceiver)
   }
 
   private val messageReceiver: BroadcastReceiver = object : BroadcastReceiver() {
